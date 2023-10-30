@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="logo_medium_white">Logo de tamanho médio da CASAD com fundo branco</string>
+    <string name="app_name">CASAD</string>
+    <string name="select_profile">Escolha o seu perfil</string>
+
+    <string name="title_client">CLIENTE</string>
+    <string name="text_client">Escolha esse perfil para caso queira ver os nosso produtos!</string>
+
+    <string name="title_supplier">FORNECEDOR</string>
+    <string name="text_supplier">Caso você seja parte desta cooperativa, escolha esta opção!</string>
+</resources>
