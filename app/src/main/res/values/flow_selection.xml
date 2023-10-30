@@ -9,4 +9,7 @@
 
     <string name="title_supplier">FORNECEDOR</string>
     <string name="text_supplier">Caso você seja parte desta cooperativa, escolha esta opção!</string>
+
+    <string name="icon_person">Ícone de pessoa</string>
+    <string name="icon_store">Ícone de loja</string>
 </resources>
