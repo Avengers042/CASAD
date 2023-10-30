@@ -13,9 +13,9 @@
 
         <View
             android:id="@+id/top_bar"
-            android:layout_width="437dp"
-            android:layout_height="52dp"
-            android:layout_marginBottom="500dp"
+            android:layout_width="435dp"
+            android:layout_height="61dp"
+            android:layout_marginBottom="492dp"
             android:background="@drawable/container_second_border"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +100,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/arrow_back"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.005"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/container_bar" />
 
@@ -147,10 +147,11 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="center"
-            android:src="@drawable/search_bar"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/emoji_icon"
             app:layout_constraintBottom_toBottomOf="@+id/top_bar6"
-            app:layout_constraintTop_toTopOf="@+id/top_bar6"
-            tools:layout_editor_absoluteX="16dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_bar6" />
 
         <TextView
             android:id="@+id/textView"
@@ -222,9 +223,65 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            android:text="Name"
             tools:layout_editor_absoluteX="106dp"
             tools:layout_editor_absoluteY="69dp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="124dp"
+            android:fontFamily="@font/karla"
+            android:text="Gabriel Ramos"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar"
+            app:layout_constraintTop_toTopOf="@+id/top_bar"
+            app:layout_constraintVertical_bias="0.571" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="225dp"
+            android:layout_height="80dp"
+            android:fontFamily="@font/karla"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh sed sapien facilisis semper in vel elit."
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar4"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar4"
+            app:layout_constraintStart_toStartOf="@+id/top_bar4"
+            app:layout_constraintTop_toTopOf="@+id/top_bar4" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="225dp"
+            android:layout_height="80dp"
+            android:fontFamily="@font/karla"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh sed sapien facilisis semper in vel elit."
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar2"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar2"
+            app:layout_constraintStart_toStartOf="@+id/top_bar2"
+            app:layout_constraintTop_toTopOf="@+id/top_bar2" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="216dp"
+            android:layout_height="39dp"
+            android:fontFamily="@font/karla"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar5"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar5"
+            app:layout_constraintStart_toStartOf="@+id/top_bar5"
+            app:layout_constraintTop_toTopOf="@+id/top_bar5" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="216dp"
+            android:layout_height="39dp"
+            android:fontFamily="@font/karla"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            app:layout_constraintBottom_toBottomOf="@+id/top_bar3"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar3"
+            app:layout_constraintStart_toStartOf="@+id/top_bar3"
+            app:layout_constraintTop_toTopOf="@+id/top_bar3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
