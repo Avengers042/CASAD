@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_client_register1">Cadastro de clientes</string>
+    <string name="title_register">Cadastro</string>
+    <string name="name_register">Seu nome</string>
+    <string name="cpf_register">CPF</string>
+    <string name="address_register">Endereço</string>
+    <string name="zip_code_register">CEP</string>
+    <string name="phone_number_register">Número de celular</string>
+    <string name="button_register">Cadastrar</string>
+</resources>
