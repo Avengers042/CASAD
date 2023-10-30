@@ -1,23 +1,31 @@
 package com.avengers.casad;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.splashscreen.SplashScreen;
-import androidx.core.splashscreen.SplashScreenViewProvider;
+
+import com.avengers.casad.databinding.ActivityMainBinding;
+import com.avengers.casad.ui.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SplashScreen splashScreen = SplashScreen.installSplashScreen(this);
+        SplashScreen.installSplashScreen(this);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        final ConstraintLayout clientConstraintLayout = binding.client;
+        final ConstraintLayout supplierConstraintLayout = binding.supplier;
+
+        supplierConstraintLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        });
     }
 }
