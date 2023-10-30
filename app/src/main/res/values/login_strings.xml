@@ -1,0 +1,10 @@
+<resources>
+    <string name="title_activity_login">Login</string>
+    <string name="back_content_description">Botão para navegar para a tela anterior</string>
+    <string name="main_logo_description">Logo principal da CASAD com ícone e nome da CASAD</string>
+    <string name="title_forms">Login</string>
+    <string name="field_email">Seu email</string>
+    <string name="field_password">Sua senha</string>
+    <string name="button_login">ENTRAR</string>
+    <string name="login_reset_password">Esqueceu a senha?</string>
+</resources>
