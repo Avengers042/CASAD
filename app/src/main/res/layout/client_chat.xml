@@ -22,13 +22,13 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <View
-            android:id="@+id/top_bar6"
+            android:id="@+id/bottom_bar"
             android:layout_width="437dp"
             android:layout_height="52dp"
             android:background="@drawable/container_second_border"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="681dp" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <View
             android:id="@+id/top_bar2"
@@ -84,6 +84,7 @@
             android:id="@+id/top_bar7"
             android:layout_width="260dp"
             android:layout_height="33dp"
+            android:layout_marginBottom="4dp"
             android:background="@drawable/container_second_border"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -147,9 +148,11 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_gravity="center"
-            android:layout_marginStart="12dp"
+            android:layout_marginBottom="4dp"
             android:src="@drawable/emoji_icon"
-            app:layout_constraintBottom_toBottomOf="@+id/top_bar6"
+            app:layout_constraintBottom_toBottomOf="@+id/bottom_bar"
+            app:layout_constraintEnd_toEndOf="@+id/top_bar7"
+            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/top_bar6" />
 
