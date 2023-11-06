@@ -3,6 +3,7 @@
     <style name="Base.Theme.CASAD" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:colorPrimary">@color/green</item>
         <item name="android:colorSecondary">@color/dark_green</item>
+        <item name="android:statusBarColor">@color/green</item>
     </style>
 
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
@@ -10,7 +11,6 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/medium_logo</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.CASAD</item>
     </style>
-
 
     <style name="Theme.CASAD" parent="Base.Theme.CASAD" />
 </resources>
