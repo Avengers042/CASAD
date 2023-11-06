@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_activity_client_register1">Cadastro de clientes</string>
+    <string name="title_activity_client_register">Cadastro de clientes</string>
     <string name="title_register">Cadastro</string>
     <string name="name_register">Seu nome</string>
     <string name="cpf_register">CPF</string>
