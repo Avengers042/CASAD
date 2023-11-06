@@ -13,9 +13,29 @@
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
         <activity
+            android:name=".ui.client.shopping_cart.ClientShoppingCart"
+            android:exported="false"
+            android:label="@string/title_activity_client_shopping_cart"
+            android:theme="@style/Base.Theme.CASAD" />
+        <activity
+            android:name=".ui.client.product_selection.ClientProductSelectionActivity"
+            android:exported="false"
+            android:label="@string/title_activity_client_selection"
+            android:theme="@style/Base.Theme.CASAD" />
+        <activity
+            android:name=".ui.client.chat.ClientChatActivity"
+            android:exported="false"
+            android:label="@string/title_activity_client_chat"
+            android:theme="@style/Base.Theme.CASAD" />
+        <activity
+            android:name=".ui.client.main.ClientMainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_client_name"
+            android:theme="@style/Base.Theme.CASAD" />
+        <activity
             android:name=".ui.register.ClientRegisterActivity"
             android:exported="false"
-            android:label="@string/title_activity_client_register1"
+            android:label="@string/title_activity_client_register"
             android:theme="@style/Base.Theme.CASAD" />
         <activity
             android:name=".ui.login.LoginActivity"
