@@ -186,6 +186,7 @@
             android:backgroundTint="@color/orange"
             android:text="@string/button_register"
             android:textAllCaps="true"
+            android:textColor="@color/white"
             app:cornerRadius="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

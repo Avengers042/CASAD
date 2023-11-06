@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -394,7 +393,7 @@
 
             android:layout_width="296dp"
             android:layout_height="228dp"
-            android:background="@drawable/Alface"
+            android:background="@drawable/alface"
             app:layout_constraintBottom_toBottomOf="@+id/product_container"
             app:layout_constraintEnd_toEndOf="@+id/product_container"
             app:layout_constraintHorizontal_bias="0.523"
