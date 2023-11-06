@@ -12,13 +12,10 @@ import com.avengers.casad.ui.register.ClientRegisterActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private ActivityLoginBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        ActivityLoginBinding binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         final ImageButton backButton = binding.backButton;

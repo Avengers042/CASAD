@@ -8,14 +8,15 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.avengers.casad.databinding.ActivityClientRegisterBinding;
+import com.avengers.casad.ui.client.main.ClientMainActivity;
 
 public class ClientRegisterActivity extends AppCompatActivity {
-    private ActivityClientRegisterBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityClientRegisterBinding.inflate(getLayoutInflater());
+
+        ActivityClientRegisterBinding binding = ActivityClientRegisterBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         final ImageButton backButton = binding.backButton;
@@ -23,7 +24,7 @@ public class ClientRegisterActivity extends AppCompatActivity {
 
         backButton.setOnClickListener(v -> finish());
         registerButton.setOnClickListener(v -> {
-            Intent intent = new Intent();
+            Intent intent = new Intent(this, ClientMainActivity.class);
             startActivity(intent);
         });
     }
