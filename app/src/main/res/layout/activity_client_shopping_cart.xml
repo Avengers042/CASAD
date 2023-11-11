@@ -1,424 +1,439 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/container_bar"
-            android:layout_width="487dp"
-            android:layout_height="180dp"
-            android:layout_marginBottom="551dp"
-            android:background="@drawable/input_container"
-            android:backgroundTint="@color/green"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <View
-            android:id="@+id/search_input"
-            android:layout_width="329dp"
-            android:layout_height="47dp"
-            android:background="@drawable/input_container"
-            android:backgroundTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/container_bar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.448"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.508" />
-
-        <ImageView
-            android:id="@+id/logo_search"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:src="@drawable/search_bar"
-            app:layout_constraintBottom_toBottomOf="@+id/search_input"
-            app:layout_constraintEnd_toEndOf="@+id/search_input"
-            app:layout_constraintHorizontal_bias="0.029"
-            app:layout_constraintStart_toStartOf="@+id/search_input"
-            app:layout_constraintTop_toTopOf="@+id/search_input" />
-
-        <ImageView
-            android:id="@+id/back_arrow"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:elevation="16dp"
-            android:src="@drawable/arrow_back"
-            app:layout_constraintBottom_toBottomOf="@+id/top_bar"
-            app:layout_constraintEnd_toEndOf="@+id/top_bar"
-            app:layout_constraintHorizontal_bias="0.071"
-            app:layout_constraintStart_toStartOf="@+id/top_bar"
-            app:layout_constraintTop_toTopOf="@+id/top_bar"
-            app:layout_constraintVertical_bias="0.551" />
-
-        <TextView
-            android:id="@+id/textTitleTopBar"
-            android:layout_width="38dp"
-            android:layout_height="14dp"
-            android:elevation="32dp"
-            android:fontFamily="@font/karla"
-            android:text="Filtros"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="@+id/top_bar"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="@+id/top_bar"
-            app:layout_constraintTop_toTopOf="@+id/top_bar" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/karla"
-            android:text="Filtros"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/container_bar"
-            app:layout_constraintEnd_toEndOf="@+id/container_bar"
-            app:layout_constraintHorizontal_bias="0.741"
-            app:layout_constraintStart_toStartOf="@+id/container_bar"
-            app:layout_constraintTop_toTopOf="@+id/container_bar"
-            app:layout_constraintVertical_bias="0.788" />
-
-        <ImageView
-            android:id="@+id/logo_filter"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="center"
-            android:src="@drawable/filter"
-            app:layout_constraintBottom_toBottomOf="@+id/container_bar"
-            app:layout_constraintEnd_toEndOf="@+id/container_bar"
-            app:layout_constraintHorizontal_bias="0.818"
-            app:layout_constraintStart_toStartOf="@+id/container_bar"
-            app:layout_constraintTop_toTopOf="@+id/container_bar"
-            app:layout_constraintVertical_bias="0.782" />
-
-        <ImageView
-            android:id="@+id/logo_menu"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:src="@drawable/menu"
-            app:layout_constraintBottom_toBottomOf="@+id/container_bar"
-            app:layout_constraintEnd_toEndOf="@+id/container_bar"
-            app:layout_constraintHorizontal_bias="0.159"
-            app:layout_constraintStart_toStartOf="@+id/container_bar"
-            app:layout_constraintTop_toTopOf="@+id/container_bar"
-            app:layout_constraintVertical_bias="0.102" />
-
-        <ImageView
-            android:id="@+id/logo_shopping_cart"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:src="@drawable/shopping_cart"
-            app:layout_constraintBottom_toBottomOf="@+id/container_bar"
-            app:layout_constraintEnd_toEndOf="@+id/container_bar"
-            app:layout_constraintHorizontal_bias="0.818"
-            app:layout_constraintStart_toStartOf="@+id/container_bar"
-            app:layout_constraintTop_toTopOf="@+id/container_bar"
-            app:layout_constraintVertical_bias="0.102" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="106dp"
-            android:layout_height="99dp"
-            android:elevation="16dp"
-            android:src="@drawable/alface"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container1"
-            app:layout_constraintEnd_toEndOf="@+id/product_container1"
-            app:layout_constraintHorizontal_bias="0.109"
-            app:layout_constraintStart_toStartOf="@+id/product_container1"
-            app:layout_constraintTop_toTopOf="@+id/product_container1"
-            app:layout_constraintVertical_bias="0.523" />
-
-        <ImageView
-            android:id="@+id/plus"
-            android:layout_width="22dp"
-            android:layout_height="17dp"
-            android:elevation="16dp"
-            android:src="@drawable/plus"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container1"
-            app:layout_constraintEnd_toEndOf="@+id/product_container1"
-            app:layout_constraintHorizontal_bias="0.434"
-            app:layout_constraintStart_toStartOf="@+id/product_container1"
-            app:layout_constraintTop_toTopOf="@+id/product_container1"
-            app:layout_constraintVertical_bias="0.838" />
-
-        <ImageView
-            android:id="@+id/minus"
-            android:layout_width="22dp"
-            android:layout_height="17dp"
-            android:elevation="16dp"
-            android:src="@drawable/minus"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container1"
-            app:layout_constraintEnd_toEndOf="@+id/product_container1"
-            app:layout_constraintHorizontal_bias="0.615"
-            app:layout_constraintStart_toStartOf="@+id/product_container1"
-            app:layout_constraintTop_toTopOf="@+id/product_container1"
-            app:layout_constraintVertical_bias="0.838" />
-
-        <ImageView
-            android:id="@+id/minus2"
-            android:layout_width="22dp"
-            android:layout_height="17dp"
-            android:elevation="16dp"
-            android:src="@drawable/minus"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container2"
-            app:layout_constraintEnd_toEndOf="@+id/product_container2"
-            app:layout_constraintHorizontal_bias="0.615"
-            app:layout_constraintStart_toStartOf="@+id/product_container2"
-            app:layout_constraintTop_toTopOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.838" />
-
-        <ImageView
-            android:id="@+id/trash"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:elevation="16dp"
-            android:src="@drawable/trash"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container1"
-            app:layout_constraintEnd_toEndOf="@+id/product_container1"
-            app:layout_constraintHorizontal_bias="0.91"
-            app:layout_constraintStart_toStartOf="@+id/product_container1"
-            app:layout_constraintTop_toTopOf="@+id/product_container1"
-            app:layout_constraintVertical_bias="0.177" />
-
-        <View
-            android:id="@+id/product_container1"
-            android:layout_width="381dp"
-            android:layout_height="141dp"
-            android:background="@drawable/container_border"
-            android:elevation="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_bar"
-            app:layout_constraintVertical_bias="0.088" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
-            android:fontFamily="@font/karla"
-            android:text="Alface Americana"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container1"
-            app:layout_constraintEnd_toEndOf="@+id/product_container1"
-            app:layout_constraintHorizontal_bias="0.53"
-            app:layout_constraintStart_toStartOf="@+id/product_container1"
-            app:layout_constraintTop_toTopOf="@+id/product_container1"
-            app:layout_constraintVertical_bias="0.174" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
-            android:text="R$ 4,99"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container1"
-            app:layout_constraintEnd_toEndOf="@+id/product_container1"
-            app:layout_constraintHorizontal_bias="0.907"
-            app:layout_constraintStart_toStartOf="@+id/product_container1"
-            app:layout_constraintTop_toTopOf="@+id/product_container1"
-            app:layout_constraintVertical_bias="0.841" />
-
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
-            android:text="0"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container1"
-            app:layout_constraintEnd_toEndOf="@+id/product_container1"
-            app:layout_constraintHorizontal_bias="0.515"
-            app:layout_constraintStart_toStartOf="@+id/product_container1"
-            app:layout_constraintTop_toTopOf="@+id/product_container1"
-            app:layout_constraintVertical_bias="0.841" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="106dp"
-            android:layout_height="99dp"
-            android:elevation="16dp"
-            android:src="@drawable/alface_lisa"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container2"
-            app:layout_constraintEnd_toEndOf="@+id/product_container2"
-            app:layout_constraintHorizontal_bias="0.109"
-            app:layout_constraintStart_toStartOf="@+id/product_container2"
-            app:layout_constraintTop_toTopOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.523" />
-
-        <ImageView
-            android:id="@+id/plus2"
-            android:layout_width="22dp"
-            android:layout_height="17dp"
-            android:elevation="16dp"
-            android:src="@drawable/plus"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container2"
-            app:layout_constraintEnd_toEndOf="@+id/product_container1"
-            app:layout_constraintHorizontal_bias="0.434"
-            app:layout_constraintStart_toStartOf="@+id/product_container2"
-            app:layout_constraintTop_toTopOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.838" />
-
-        <ImageView
-            android:id="@+id/trash2"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:elevation="16dp"
-            android:src="@drawable/trash"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container2"
-            app:layout_constraintEnd_toEndOf="@+id/product_container2"
-            app:layout_constraintHorizontal_bias="0.91"
-            app:layout_constraintStart_toStartOf="@+id/product_container2"
-            app:layout_constraintTop_toTopOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.177" />
-
-        <View
-            android:id="@+id/product_container2"
-            android:layout_width="381dp"
-            android:layout_height="141dp"
-            android:background="@drawable/container_border"
-            android:elevation="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.533"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_container1"
-            app:layout_constraintVertical_bias="0.156" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
-            android:fontFamily="@font/karla"
-            android:text="Alface Lisa"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container2"
-            app:layout_constraintEnd_toEndOf="@+id/product_container2"
-            app:layout_constraintHorizontal_bias="0.458"
-            app:layout_constraintStart_toStartOf="@+id/product_container2"
-            app:layout_constraintTop_toTopOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.161" />
-
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
-            android:fontFamily="@font/karla"
-            android:text="Total"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.134"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.201" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
-            android:text="R$ 4,99"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container2"
-            app:layout_constraintEnd_toEndOf="@+id/product_container2"
-            app:layout_constraintHorizontal_bias="0.907"
-            app:layout_constraintStart_toStartOf="@+id/product_container2"
-            app:layout_constraintTop_toTopOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.841" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:elevation="16dp"
-            android:text="R$ 19,99"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.954"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_container2" />
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="16dp"
-            android:fontFamily="@font/karla"
-            android:text="0"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/product_container2"
-            app:layout_constraintEnd_toEndOf="@+id/product_container2"
-            app:layout_constraintHorizontal_bias="0.515"
-            app:layout_constraintStart_toStartOf="@+id/product_container2"
-            app:layout_constraintTop_toTopOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.841" />
-
-        <View
-            android:id="@+id/top_bar"
-            android:layout_width="435dp"
-            android:layout_height="61dp"
-            android:layout_marginBottom="492dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view"
+            android:layout_width="443dp"
+            android:layout_height="167dp"
             android:background="@drawable/container_second_border"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="@color/green"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/container_bar"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Menu superior">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
-            android:layout_width="146dp"
-            android:layout_height="38dp"
-            android:layout_marginStart="137dp"
-            android:background="@drawable/save_button"
-            android:text="COMPRAR"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/input_container"
+                    android:layout_width="320dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/container_shadow_border"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.495"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <View
+                    android:id="@+id/search_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/search_bar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.178"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/search_input"
+                    android:layout_width="234dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="4dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:text="Name"
+                    app:layout_constraintEnd_toEndOf="@+id/input_container"
+                    app:layout_constraintHorizontal_bias="0.616"
+                    app:layout_constraintStart_toStartOf="@+id/input_container"
+                    app:layout_constraintTop_toTopOf="@+id/input_container" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/shopping_cart_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/shopping_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.834"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.118" />
+
+            <View
+                android:id="@+id/filter_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.837"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.888" />
+
+            <View
+                android:id="@+id/menu_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.148"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.118" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/title_shopping_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/product_container2"
-            app:layout_constraintVertical_bias="0.539" />
+            app:layout_constraintTop_toBottomOf="@+id/view" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button3"
-            android:layout_width="146dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="12dp"
+        <View
+            android:id="@+id/back_button_shopping_cart"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/product_container1"
+            android:layout_width="328dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="48dp"
             android:background="@drawable/container_border"
-            android:text="CONTINUAR"
-            android:textColor="@color/green"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/title_shopping_cart">
+
+            <View
+                android:id="@+id/delete_button_shopping_cart_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/trash"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_shopping_cart_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/plus_button_shopping_cart_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="88dp"
+                android:background="@drawable/plus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/minus_button_shopping_cart_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="184dp"
+                android:layout_marginTop="88dp"
+                android:background="@drawable/minus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/number_shopping_cart_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/value_shopping_cart_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:text="R$ 4,99"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.943"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/product_image1"
+                android:layout_width="99dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/alface" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/product_container2"
+            android:layout_width="328dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="188dp"
+            android:background="@drawable/container_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_shopping_cart">
+
+            <View
+                android:id="@+id/delete_button_shopping_cart_icon2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/trash"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_shopping_cart_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/plus_button_shopping_cart_icon2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="88dp"
+                android:background="@drawable/plus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/minus_button_shopping_cart_icon2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="184dp"
+                android:layout_marginTop="88dp"
+                android:background="@drawable/minus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/number_shopping_cart_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/value_shopping_cart_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:text="R$ 4,99"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.943"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/product_image2"
+                android:layout_width="99dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/alface" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/product_container3"
+            android:layout_width="328dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="328dp"
+            android:background="@drawable/container_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_shopping_cart">
+
+            <View
+                android:id="@+id/delete_button_shopping_cart_icon3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/trash"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_shopping_cart_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/plus_button_shopping_cart_icon3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="88dp"
+                android:background="@drawable/plus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/minus_button_shopping_cart_icon3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="184dp"
+                android:layout_marginTop="88dp"
+                android:background="@drawable/minus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/number_shopping_cart_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/value_shopping_cart_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:text="R$ 4,99"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.943"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/product_image3"
+                android:layout_width="99dp"
+                android:layout_height="92dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/alface" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/text_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_container3" />
+
+        <TextView
+            android:id="@+id/text_total_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="56dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_container3" />
+
+        <android.widget.Button
+            android:id="@+id/shopping_cart_button1"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Button"
+            android:background="@drawable/container_border"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_container3" />
+
+        <android.widget.Button
+            android:id="@+id/shopping_cart_button2"
+            android:layout_width="188dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Button"
+            android:textColor="@color/green"
+            android:background="@drawable/container_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopping_cart_button1" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
-
-
