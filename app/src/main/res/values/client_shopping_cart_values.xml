@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_activity_client_shopping_cart">Carrinho de compras do cliente</string>
+    <string name="title_activity_client_shopping_cart">Carrinho de Compras</string>
+    <string name="title_product_1">Alface americana</string>
+    <string name="title_product_2">Alface lisa</string>
+    <string name="title_product_3">Mostarda</string>
+    <string name="product_price_1">R$ 4,99</string>
+    <string name="product_price_2">R$ 4,99</string>
+    <string name="product_price_3">R$ 4,99</string>
+    <string name="product_number_1">1</string>
+    <string name="product_number_2">1</string>
+    <string name="product_number_3">1</string>
+    <string name="total">Total</string>
+    <string name="price_total">R$ 14,97</string>
+    <string name="button_text1">PAGAMENTO</string>
+    <string name="button_text2">CONTINUAR COMPRANDO</string>
+    <string name="img_description1">Imagem</string>
+    <string name="img_description2">Segunda Imagem</string>
+    <string name="img_description3">Terceira Imagem</string>
+
 </resources>

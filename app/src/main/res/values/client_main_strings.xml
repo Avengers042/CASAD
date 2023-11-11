@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="title_activity_client_name">Tela principal do cliente</string>
+    <string name="tab_item_1">Folhagens</string>
+    <string name="tab_item_2">Verduras</string>
+    <string name="tab_item_3">Frutas</string>
+    <string name="tab_item_4">Produtos convencionais</string>
+    <string name="product_name1">Alface americana</string>
+    <string name="product_name2">Alface lisa</string>
+    <string name="product_name3">Alface romana</string>
+    <string name="product_name4">Cebolinha</string>
+    <string name="product_name5">Coentro</string>
+    <string name="product_name6">Salsa</string>
+    <string name="product_name7">Rúcula</string>
+    <string name="product_name8">Agrião</string>
+    <string name="product_name9">Almeirão</string>
+    <string name="product_name10">Mostarda</string>
+    <string name="product_name11">Couve</string>
+    <string name="product_name12">Espinafre</string>
+    <string name="product_price1">R$ 4,99</string>
+    <string name="product_price2">R$ 4,99</string>
+    <string name="product_price3">R$ 4,99</string>
+    <string name="product_price4">R$ 4,99</string>
+    <string name="product_price5">R$ 4,99</string>
+    <string name="product_price6">R$ 4,99</string>
+    <string name="product_price7">R$ 4,99</string>
+    <string name="product_price8">R$ 4,99</string>
+    <string name="product_price9">R$ 4,99</string>
+    <string name="product_price10">R$ 4,99</string>
+    <string name="product_price11">R$ 4,99</string>
+    <string name="product_price12">R$ 4,99</string>
+    <string name="tab_description1">Item tab1</string>
+    <string name="tab_description2">Item tab2</string>
+    <string name="tab_description3">Item tab3</string>
+    <string name="tab_description4">Item tab4</string>
+    <string name="img_description">Imagem</string>
+
 </resources>

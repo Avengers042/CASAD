@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filter_text">Filtros</string>
+    <string name="input_text">Procurar</string>
+    <string name="header_description">Cabeçalho</string>
+</resources>

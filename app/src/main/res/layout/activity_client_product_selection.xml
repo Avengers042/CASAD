@@ -11,29 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/plus_button_shopping_cart_icon6"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/star"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/view"
+            android:id="@+id/header"
             android:layout_width="463dp"
             android:layout_height="184dp"
             android:background="@drawable/container_second_border"
             android:backgroundTint="@color/green"
-            android:contentDescription="Menu superior"
+            android:contentDescription="@string/header_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/inner_constraint_layout"
+                android:id="@+id/input_constraint_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
@@ -66,13 +56,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/editTextText5"
+                    android:id="@+id/search_input"
                     android:layout_width="234dp"
                     android:layout_height="44dp"
                     android:layout_marginTop="4dp"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="Name"
+                    android:hint="@string/input_text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/karla"
+                    android:autofillHints="@string/input_text"
                     app:layout_constraintEnd_toEndOf="@+id/input_container"
                     app:layout_constraintHorizontal_bias="0.616"
                     app:layout_constraintStart_toStartOf="@+id/input_container"
@@ -117,6 +110,17 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.118" />
 
+            <TextView
+                android:id="@+id/filter_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/filter_text"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_constraint_layout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -127,8 +131,9 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/arrow_back"
+            android:contentDescription="@string/back_content_description"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintTop_toBottomOf="@+id/header" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/product_container1"
@@ -139,7 +144,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.506"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view">
+            app:layout_constraintTop_toBottomOf="@+id/header">
 
             <ImageView
                 android:id="@+id/product_image1"
@@ -147,6 +152,7 @@
                 android:layout_height="235dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:contentDescription="@string/main_image_description"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/alface" />
@@ -159,8 +165,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="248dp"
-            android:text="Alface Americana"
+            android:layout_marginEnd="240dp"
+            android:fontFamily="@font/karla"
+            android:text="@string/product_name"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_container1" />
 
@@ -170,7 +178,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="320dp"
             android:layout_marginTop="16dp"
-            android:text="R$ 4,99"
+            android:text="@string/product_price"
+            android:textSize="16sp"
+            android:fontFamily="@font/karla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_container1" />
 
@@ -178,19 +188,23 @@
             android:id="@+id/value_shopping_cart_text3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="32dp"
-            android:text="Sobre"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/karla"
+            android:text="@string/about"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text2" />
 
         <TextView
-            android:id="@+id/value_shopping_cart_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="40dp"
-            android:text="Sobre"
+            android:id="@+id/description_text"
+            android:layout_width="307dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/karla"
+            android:text="@string/first_description"
+            android:textSize="11sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text3" />
 
@@ -200,7 +214,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="36dp"
-            android:text="Sobre"
+            android:text="@string/product_opinion_title"
+            android:textSize="16sp"
+            android:fontFamily="@font/karla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/plus_button_shopping_cart_icon2" />
 
@@ -208,11 +224,13 @@
             android:id="@+id/value_shopping_cart_text6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="132dp"
+            android:layout_marginStart="148dp"
             android:layout_marginTop="4dp"
-            android:text="Sobre"
+            android:text="@string/product_opinion_number"
+            android:textSize="11sp"
+            android:fontFamily="@font/karla"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/start_container" />
 
         <TextView
             android:id="@+id/value_shopping_cart_text7"
@@ -220,7 +238,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="28dp"
-            android:text="Sobre"
+            android:text="@string/product_opinion_comment"
+            android:textSize="16sp"
+            android:fontFamily="@font/karla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text6" />
 
@@ -230,7 +250,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="20dp"
-            android:text="4.5"
+            android:text="@string/product_opinion_score"
+            android:textSize="45sp"
+            android:fontFamily="@font/karla_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text4" />
 
@@ -242,7 +264,7 @@
             android:layout_marginTop="40dp"
             android:background="@drawable/plus"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text" />
+            app:layout_constraintTop_toBottomOf="@+id/description_text" />
         <View
             android:id="@+id/minus_button_shopping_cart_icon2"
             android:layout_width="24dp"
@@ -251,18 +273,20 @@
             android:layout_marginEnd="264dp"
             android:background="@drawable/minus"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text" />
+            app:layout_constraintTop_toBottomOf="@+id/description_text" />
 
         <TextView
             android:id="@+id/number_shopping_cart_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
-            android:text="0"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/karla"
+            android:text="@string/product_quantity"
+            android:textSize="22sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.259"
+            app:layout_constraintHorizontal_bias="0.243"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text" />
+            app:layout_constraintTop_toBottomOf="@+id/description_text" />
 
         <android.widget.Button
             android:id="@+id/shopping_cart_button1"
@@ -271,23 +295,24 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/container_border"
             android:backgroundTint="@color/green"
-            android:text="Button"
+            android:text="@string/button_text"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.887"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text" />
+            app:layout_constraintTop_toBottomOf="@+id/description_text" />
 
         <?xml version="1.0" encoding="utf-8"?>
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+            android:id="@+id/start_container"
             android:layout_width="198dp"
             android:layout_height="54dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintHorizontal_bias="0.619"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shopping_cart_button1">
+            app:layout_constraintTop_toBottomOf="@+id/value_shopping_cart_text4">
 
             <View
                 android:id="@+id/plus_button_shopping_cart_icon3"
@@ -342,7 +367,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+            android:id="@+id/user_message_container"
             android:layout_width="361dp"
             android:layout_height="151dp"
             android:layout_marginTop="8dp"
@@ -381,18 +406,30 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <EditText
+                android:id="@+id/editTextText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="44dp"
+                android:ems="10"
+                android:inputType="text"
+                android:autofillHints="@string/product_opinion_sendComment"
+                app:layout_constraintEnd_toEndOf="@+id/message_container"
+                app:layout_constraintTop_toTopOf="@+id/message_container" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
+            android:id="@+id/other_user_message"
             android:layout_width="361dp"
             android:layout_height="151dp"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.851"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+            app:layout_constraintTop_toBottomOf="@+id/user_message_container">
 
             <View
                 android:id="@+id/plus_button_shopping_cart"
@@ -410,7 +447,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Nome"
+                android:text="@string/first_user_name"
+                android:textSize="11sp"
+                android:fontFamily="@font/karla_bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.121"
                 app:layout_constraintStart_toStartOf="parent"
@@ -418,12 +457,12 @@
 
             <TextView
                 android:id="@+id/number_shopping_cart_text223"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Mensagem"
+                android:layout_width="256dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/first_user_opinion"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.121"
+                app:layout_constraintHorizontal_bias="0.719"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/number_shopping_cart_text23" />
 
@@ -432,7 +471,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="44dp"
-                android:text="Responder"
+                android:text="@string/answer1"
+                android:textSize="11sp"
+                android:fontFamily="@font/karla"
+                android:textColor="@color/gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.296"
                 app:layout_constraintStart_toStartOf="parent"
@@ -445,7 +487,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="40dp"
                 android:backgroundTint="@color/white"
-                android:contentDescription="Descrição do botão"
+                android:contentDescription="@string/button_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/number_shopping_cart_text223"
                 app:srcCompat="@drawable/arrow_grey_message" />
@@ -453,13 +495,14 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/other_user_message2"
             android:layout_width="361dp"
             android:layout_height="151dp"
             android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.851"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+            app:layout_constraintTop_toBottomOf="@+id/other_user_message">
 
             <View
                 android:id="@+id/plus_button_shopping_cart21"
@@ -477,7 +520,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Nome"
+                android:text="@string/second_user_name"
+                android:textSize="11sp"
+                android:fontFamily="@font/karla_bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.12"
                 app:layout_constraintStart_toStartOf="parent"
@@ -485,12 +530,12 @@
 
             <TextView
                 android:id="@+id/number_shopping_cart_text2234"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="271dp"
+                android:layout_height="51dp"
                 android:layout_marginTop="12dp"
-                android:text="Mensagem"
+                android:text="@string/second_user_opinion"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.134"
+                app:layout_constraintHorizontal_bias="0.822"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/number_shopping_cart_text233" />
 
@@ -498,23 +543,26 @@
                 android:id="@+id/number_shopping_cart_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="84dp"
-                android:text="Responder"
+                android:layout_marginTop="32dp"
+                android:text="@string/answer2"
+                android:textSize="11sp"
+                android:fontFamily="@font/karla"
+                android:textColor="@color/gray"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.286"
+                app:layout_constraintHorizontal_bias="0.303"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/number_shopping_cart_text233" />
+                app:layout_constraintTop_toBottomOf="@+id/number_shopping_cart_text2234" />
 
             <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="32dp"
                 android:layout_height="26dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="24dp"
                 android:backgroundTint="@color/white"
+                android:contentDescription="@string/button_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/number_shopping_cart_text2234"
-                android:contentDescription="Descrição do botão"
                 app:srcCompat="@drawable/arrow_grey_message" />
 
 

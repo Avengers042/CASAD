@@ -2,7 +2,6 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -11,29 +10,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/plus_button_shopping_cart_icon6"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/star"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/view"
+            android:id="@+id/header"
             android:layout_width="463dp"
             android:layout_height="184dp"
             android:background="@drawable/container_second_border"
             android:backgroundTint="@color/green"
-            android:contentDescription="Menu superior"
+            android:contentDescription="@string/header_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/inner_constraint_layout"
+                android:id="@+id/input_constraint_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
@@ -66,13 +55,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/editTextText5"
+                    android:id="@+id/search_input"
                     android:layout_width="234dp"
                     android:layout_height="44dp"
                     android:layout_marginTop="4dp"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="Name"
+                    android:hint="@string/input_text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/karla"
+                    android:autofillHints="@string/input_text"
                     app:layout_constraintEnd_toEndOf="@+id/input_container"
                     app:layout_constraintHorizontal_bias="0.616"
                     app:layout_constraintStart_toStartOf="@+id/input_container"
@@ -117,21 +109,33 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.118" />
 
+            <TextView
+                android:id="@+id/filter_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/filter_text"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_constraint_layout" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <?xml version="1.0" encoding="utf-8"?>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout6"
+            android:id="@+id/chat_title"
             android:layout_width="408dp"
             android:layout_height="63dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view">
+            app:layout_constraintTop_toBottomOf="@+id/header">
 
             <View
-                android:id="@+id/input_container2"
+                android:id="@+id/title_container"
                 android:layout_width="446dp"
                 android:layout_height="55dp"
                 android:background="@drawable/border_bottom"
@@ -143,110 +147,121 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/name_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="172dp"
-                android:layout_marginBottom="28dp"
-                android:text="TextView"
+                android:layout_marginEnd="128dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/karla"
+                android:text="@string/user_name_chat"
+                android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
             <android.widget.Button
-                android:id="@+id/view5"
+                android:id="@+id/arrow_back_icon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/arrow_back"
+                android:contentDescription="@string/button_description"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/input_container2" />
+                app:layout_constraintTop_toTopOf="@+id/title_container" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout8"
+            android:id="@+id/green_message1"
             android:layout_width="258dp"
             android:layout_height="96dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/text_message_green"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+            app:layout_constraintTop_toBottomOf="@+id/chat_title">
 
 
             <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/message_1"
+                android:layout_width="237dp"
+                android:layout_height="76dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:text="@string/first_message"
+                android:fontFamily="@font/karla"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout7"
+            android:id="@+id/white_message1"
             android:layout_width="258dp"
             android:layout_height="116dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/text_message_grey"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+            app:layout_constraintTop_toBottomOf="@+id/green_message1">
 
 
             <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/message_2"
+                android:layout_width="233dp"
+                android:layout_height="78dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
-                android:text="TextView"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/karla"
+                android:text="@string/reply_message"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout9"
+            android:id="@+id/green_message2"
             android:layout_width="258dp"
             android:layout_height="56dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:background="@drawable/text_message_green"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+            app:layout_constraintTop_toBottomOf="@+id/white_message1">
 
             <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/message_3"
+                android:layout_width="241dp"
+                android:layout_height="33dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/karla"
+                android:text="@string/second_message"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout10"
+            android:id="@+id/white_message2"
             android:layout_width="258dp"
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/text_message_grey"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+            app:layout_constraintTop_toBottomOf="@+id/green_message2">
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/message_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/karla"
+                android:text="@string/second_reply_message"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -258,7 +273,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+            app:layout_constraintTop_toBottomOf="@+id/white_message2">
 
             <View
                 android:id="@+id/input_container_bottom"
@@ -273,12 +288,15 @@
                 app:layout_constraintVertical_bias="0.476" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/input_send_message"
                 android:layout_width="153dp"
                 android:layout_height="22dp"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Name"
+                android:fontFamily="@font/karla"
+                android:hint="@string/send_message"
+                android:autofillHints="@string/send_message"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@+id/input_container_bottom"
                 app:layout_constraintEnd_toEndOf="@+id/input_container_bottom"
                 app:layout_constraintHorizontal_bias="0.533"

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/view"
+            android:id="@+id/header"
             android:layout_width="443dp"
             android:layout_height="167dp"
             android:background="@drawable/container_second_border"
@@ -20,10 +20,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Menu superior">
+            android:contentDescription="@string/header_description">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/container_search_bar"
+                android:id="@+id/input_constraint_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
@@ -62,11 +62,15 @@
                     android:layout_marginTop="4dp"
                     android:ems="10"
                     android:inputType="text"
-                    android:text="Name"
+                    android:hint="@string/input_text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/karla"
+                    android:autofillHints="@string/input_text"
                     app:layout_constraintEnd_toEndOf="@+id/input_container"
                     app:layout_constraintHorizontal_bias="0.616"
                     app:layout_constraintStart_toStartOf="@+id/input_container"
                     app:layout_constraintTop_toTopOf="@+id/input_container" />
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -107,6 +111,18 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.118" />
 
+            <TextView
+                android:id="@+id/filter_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="304dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/filter_text"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_constraint_layout" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -114,12 +130,14 @@
             android:id="@+id/title_shopping_cart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="TextView"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_activity_client_shopping_cart"
+            android:textSize="22sp"
+            android:fontFamily="@font/karla_bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintTop_toBottomOf="@+id/header" />
 
         <View
             android:id="@+id/back_button_shopping_cart"
@@ -129,7 +147,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/arrow_back"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintTop_toBottomOf="@+id/header" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/product_container1"
@@ -156,10 +174,12 @@
                 android:id="@+id/title_shopping_cart_text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:layout_marginTop="8dp"
+                android:text="@string/title_product_1"
+                android:textSize="14sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintHorizontal_bias="0.547"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -188,7 +208,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="88dp"
-                android:text="0"
+                android:text="@string/product_number_1"
+                android:textSize="16sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -198,7 +220,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="88dp"
-                android:text="R$ 4,99"
+                android:text="@string/product_price1"
+                android:textSize="16sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.943"
                 app:layout_constraintStart_toStartOf="parent"
@@ -210,6 +234,7 @@
                 android:layout_height="92dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:contentDescription="@string/img_description1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/alface" />
@@ -243,7 +268,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:text="@string/title_product_2"
+                android:textSize="14sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.466"
                 app:layout_constraintStart_toStartOf="parent"
@@ -274,7 +301,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="88dp"
-                android:text="0"
+                android:text="@string/product_number_2"
+                android:textSize="16sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -284,7 +313,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="88dp"
-                android:text="R$ 4,99"
+                android:text="@string/product_price2"
+                android:textSize="16sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.943"
                 app:layout_constraintStart_toStartOf="parent"
@@ -296,9 +327,10 @@
                 android:layout_height="92dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:contentDescription="@string/img_description2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/alface" />
+                app:srcCompat="@drawable/alface_lisa" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -329,7 +361,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="TextView"
+                android:text="@string/title_product_3"
+                android:textSize="14sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.466"
                 app:layout_constraintStart_toStartOf="parent"
@@ -360,7 +394,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="88dp"
-                android:text="0"
+                android:text="@string/product_number_3"
+                android:textSize="16sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -370,7 +406,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="88dp"
-                android:text="R$ 4,99"
+                android:text="@string/product_price3"
+                android:textSize="16sp"
+                android:fontFamily="@font/karla"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.943"
                 app:layout_constraintStart_toStartOf="parent"
@@ -382,9 +420,10 @@
                 android:layout_height="92dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:contentDescription="@string/img_description3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/alface" />
+                app:srcCompat="@drawable/mostarda" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -395,7 +434,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
             android:layout_marginTop="16dp"
-            android:text="TextView"
+            android:text="@string/total"
+            android:textSize="16sp"
+            android:fontFamily="@font/karla"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_container3" />
 
@@ -405,7 +446,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="56dp"
-            android:text="TextView"
+            android:text="@string/price_total"
+            android:textSize="16sp"
+            android:fontFamily="@font/karla"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_container3" />
 
@@ -414,10 +457,12 @@
             android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
-            android:text="Button"
+            android:text="@string/button_text1"
             android:background="@drawable/container_border"
             android:backgroundTint="@color/green"
             android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/karla"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_container3" />
@@ -427,9 +472,11 @@
             android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Button"
+            android:text="@string/button_text2"
             android:textColor="@color/green"
             android:background="@drawable/container_border"
+            android:textSize="14sp"
+            android:fontFamily="@font/karla"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/shopping_cart_button1" />
