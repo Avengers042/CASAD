@@ -9,11 +9,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:context=".ui.client.product_selection.ClientProductSelectionActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/header"
-            android:layout_width="463dp"
+            android:layout_width="match_parent"
             android:layout_height="184dp"
             android:background="@drawable/container_second_border"
             android:backgroundTint="@color/green"
@@ -301,8 +302,6 @@
             app:layout_constraintHorizontal_bias="0.887"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/description_text" />
-
-        <?xml version="1.0" encoding="utf-8"?>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/start_container"
