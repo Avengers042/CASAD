@@ -7,7 +7,7 @@
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:context=".ui.client.chat.ClientChatActivity">
 
@@ -184,7 +184,7 @@
 
             <TextView
                 android:id="@+id/message_1"
-                android:layout_width="237dp"
+                android:layout_width="wrap_content"
                 android:layout_height="76dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -208,7 +208,7 @@
 
             <TextView
                 android:id="@+id/message_2"
-                android:layout_width="233dp"
+                android:layout_width="wrap_content"
                 android:layout_height="78dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
@@ -221,8 +221,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/green_message2"
-            android:layout_width="258dp"
-            android:layout_height="56dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:background="@drawable/text_message_green"
@@ -231,23 +232,28 @@
 
             <TextView
                 android:id="@+id/message_3"
-                android:layout_width="241dp"
-                android:layout_height="33dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/karla"
-                android:text="@string/second_message"
+                android:text="@string/reply_message"
                 android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/white_message2"
-            android:layout_width="258dp"
-            android:layout_height="56dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
+            android:padding="8dp"
             android:background="@drawable/text_message_grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/green_message2">
@@ -264,6 +270,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="424dp"
