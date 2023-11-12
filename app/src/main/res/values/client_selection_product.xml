@@ -4,7 +4,7 @@
     <string name="product_name">Alface americana</string>
     <string name="product_price">R$ 4,99</string>
     <string name="about">Sobre</string>
-    <string name="first_description">A alface americana dispensa comentários, é a hortaliça folhosa de mais alto consumo no Brasil! 1,8g de carboidratos, 0,6g de proteínas, 0,1g de gorduras e 1,0g de fibras.</string>
+    <string name="first_description">A alface americana dispensa comentários, é a hortaliça folhosa de mais consumo no Brasil!\n\n 1,8g de carboidratos, 0,6g de proteínas, 0,1g de gorduras e 1,0g de fibras.</string>
     <string name="product_quantity">0</string>
     <string name="button_text">SALVAR</string>
     <string name="product_opinion_title">Opiniões do produto</string>

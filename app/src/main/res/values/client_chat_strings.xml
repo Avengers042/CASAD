@@ -2,10 +2,10 @@
 <resources>
     <string name="title_activity_client_chat">Chat do cliente</string>
     <string name="user_name_chat">Gabriel Ramos</string>
-    <string name="first_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis nibh sed sapien facilisis semper in vel elit.</string>
+    <string name="first_message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="second_message">Maecenas iaculis lacus at nisi aliquet, eget suscipit enim feugiat.</string>
-    <string name="reply_message">Integer efficitur velit at odio porttitor tempus. Donec facilisis augue at porttitor maximus. Praesent tincidunt eros nec tellus luctus aliquam.</string>
-    <string name="second_reply_message">uspendisse sed nisi dictum, facilisis erat nec, eleifend lacus.</string>
+    <string name="reply_message">Integer efficitur velit at odio porttitor tempus. </string>
+    <string name="second_reply_message">uspendisse sed nisi dictum.</string>
     <string name="send_message">Digite...</string>
     <string name="button_description">Voltar</string>
 
